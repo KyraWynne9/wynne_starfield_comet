@@ -3,31 +3,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <script type="module" src="starfield.js">
-            const COLOR_SPACE = "black";
-            const COLOR_STARS = "white";
-            const STAR_NUM = 200;
-            const STAR_SIZE = 0.005;
-            const STAR_SPEED = 0.05;
-
-            var canvas = document.createElement("myCanvas");
-            var ctx = canvas.getContext("2d");
-            canvas.height = document.documentElement.clientHeight;
-            canvas.width = document.documentElement.clientWidth;
-            document.body.appendChild(canvas);
-
-            var timeDelta, timeLast = 0;
-            requestAnimationFrame(loop);
-
-            function loop(timeNow) {
-                timeDelta = timeNow - timeLast;
-                timeLast = timeNow;
-
-                ctx.fillStyle = COLOR_SPACE;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                requestAnimationFrame(loop);
-            }
-        </script>
+        <canvas id="myCanvas" height="600" width = "600"></canvas>
+        <script type="module" src="challenges.js"></script>
     </body>
 </html>
