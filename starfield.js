@@ -13,6 +13,12 @@ let stars = [
     new Star(canvas, pencil)
 ];
 
+for(let i = 0; i < 100; i++) {
+    stars.push(new Star(canvas, pencil))
+}
+
+console.log
+
 function gameLoop() {
     
 
